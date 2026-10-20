@@ -1,0 +1,348 @@
+package manta
+
+import (
+	"fmt"
+
+	"github.com/dotabuff/manta/dota"
+)
+
+// EntityOp is a bitmask representing the type of operation performed on an Entity
+type EntityOp int
+
+const (
+	EntityOpNone           EntityOp = 0x00
+	EntityOpCreated        EntityOp = 0x01
+	EntityOpUpdated        EntityOp = 0x02
+	EntityOpDeleted        EntityOp = 0x04
+	EntityOpEntered        EntityOp = 0x08
+	EntityOpLeft           EntityOp = 0x10
+	EntityOpCreatedEntered EntityOp = EntityOpCreated | EntityOpEntered
+	EntityOpUpdatedEntered EntityOp = EntityOpUpdated | EntityOpEntered
+	EntityOpDeletedLeft    EntityOp = EntityOpDeleted | EntityOpLeft
+)
+
+var entityOpNames = map[EntityOp]string{
+	EntityOpNone:           "None",
+	EntityOpCreated:        "Created",
+	EntityOpUpdated:        "Updated",
+	EntityOpDeleted:        "Deleted",
+	EntityOpEntered:        "Entered",
+	EntityOpLeft:           "Left",
+	EntityOpCreatedEntered: "Created+Entered",
+	EntityOpUpdatedEntered: "Updated+Entered",
+	EntityOpDeletedLeft:    "Deleted+Left",
+}
+
+// Flag determines whether an EntityOp includes another. This is primarily
+// offered to prevent bit flag errors in downstream clients.
+func (o EntityOp) Flag(p EntityOp) bool {
+	return o&p != 0
+}
+
+// String returns a human identifiable string for the EntityOp
+func (o EntityOp) String() string {
+	return entityOpNames[o]
+}
+
+// EntityHandler is a function that receives Entity updates
+type EntityHandler func(*Entity, EntityOp) error
+
+// Entity represents a single game entity in the replay
+type Entity struct {
+	index  int32
+	serial int32
+	class  *class
+	active bool
+	state  *fieldState
+}
+
+// newEntity returns a new entity for the given index, serial and class
+func newEntity(index, serial int32, class *class) *Entity {
+	return &Entity{
+		index:  index,
+		serial: serial,
+		class:  class,
+		active: true,
+		state:  newFieldState(),
+	}
+}
+
+// String returns a human identifiable string for the Entity
+func (e *Entity) String() string {
+	return fmt.Sprintf("%d <%s>", e.index, e.class.name)
+}
+
+// Map returns a map of current entity state as key-value pairs
+func (e *Entity) Map() map[string]interface{} {
+	values := make(map[string]interface{})
+	for _, fp := range e.class.getFieldPaths(newFieldPath(), e.state) {
+		values[e.class.getNameForFieldPath(fp)] = e.state.get(fp)
+	}
+	return values
+}
+
+// Dump prints the current entity state to standard output
+func (e *Entity) Dump() {
+	_dump(e.String(), e.Map())
+}
+
+// Get returns the current value of the Entity state for the given key
+func (e *Entity) Get(name string) interface{} {
+	if fp, ok := e.class.fpCache[name]; ok {
+		return e.state.get(fp)
+	}
+	if e.class.fpNoop[name] {
+		return nil
+	}
+
+	fp := newFieldPath()
+	if !e.class.getFieldPathForName(fp, name) {
+		e.class.fpNoop[name] = true
+		fp.release()
+		return nil
+	}
+	e.class.fpCache[name] = fp
+
+	return e.state.get(fp)
+}
+
+// Exists returns true if the given key exists in the Entity state
+func (e *Entity) Exists(name string) bool {
+	return e.Get(name) != nil
+}
+
+// GetInt32 gets given key as an int32
+func (e *Entity) GetInt32(name string) (int32, bool) {
+	x, ok := e.Get(name).(int32)
+	return x, ok
+}
+
+// GetUint32 gets given key as a uint32
+func (e *Entity) GetUint32(name string) (uint32, bool) {
+	if v := e.Get(name); v != nil {
+		switch x := v.(type) {
+		case uint32:
+			return x, true
+		case uint64:
+			return uint32(x), true
+		}
+	}
+	return 0, false
+}
+
+// GetUint64 gets given key as a uint64
+func (e *Entity) GetUint64(name string) (uint64, bool) {
+	x, ok := e.Get(name).(uint64)
+	return x, ok
+}
+
+// GetFloat32 gets given key as an float32
+func (e *Entity) GetFloat32(name string) (float32, bool) {
+	x, ok := e.Get(name).(float32)
+	return x, ok
+}
+
+// GetString gets given key as a string
+func (e *Entity) GetString(name string) (string, bool) {
+	x, ok := e.Get(name).(string)
+	return x, ok
+}
+
+// GetBool gets given key as a bool
+func (e *Entity) GetBool(name string) (bool, bool) {
+	x, ok := e.Get(name).(bool)
+	return x, ok
+}
+
+// GetSerial return the serial of the class associated with this Entity
+func (e *Entity) GetSerial() int32 {
+	return e.serial
+}
+
+// GetClassId returns the id of the class associated with this Entity
+func (e *Entity) GetClassId() int32 {
+	return e.class.classId
+}
+
+// GetClassName returns the name of the class associated with this Entity
+func (e *Entity) GetClassName() string {
+	return e.class.name
+}
+
+// GetIndex returns the index of this Entity
+func (e *Entity) GetIndex() int32 {
+	return e.index
+}
+
+// FindEntity finds a given Entity by index
+func (p *Parser) FindEntity(index int32) *Entity {
+	if index < 0 || int(index) >= len(p.entities) {
+		return nil
+	}
+	return p.entities[index]
+}
+
+const (
+	// SOURCE2
+	indexBits  uint64 = 14
+	handleMask uint64 = (1 << indexBits) - 1
+)
+
+func handle2idx(handle uint64) int32 {
+	return int32(handle & handleMask)
+}
+
+func serialForHandle(handle uint64) int32 {
+	return int32(handle >> indexBits)
+}
+
+// FindEntityByHandle finds a given Entity by handle
+func (p *Parser) FindEntityByHandle(handle uint64) *Entity {
+	idx := handle2idx(handle)
+	e := p.FindEntity(idx)
+	if e != nil && e.GetSerial() != serialForHandle(handle) {
+		return nil
+	}
+	return e
+}
+
+// FilterEntity finds entities by callback
+func (p *Parser) FilterEntity(fb func(*Entity) bool) []*Entity {
+	entities := make([]*Entity, 0, 0)
+	for _, et := range p.entities {
+		if et != nil && fb(et) {
+			entities = append(entities, et)
+		}
+	}
+	return entities
+}
+
+// entityOpTuple pairs an entity with the operation performed on it. Updates are
+// buffered during a PacketEntities message, then dispatched to handlers.
+type entityOpTuple struct {
+	e  *Entity
+	op EntityOp
+}
+
+// Internal Callback for OnCSVCMsg_PacketEntities.
+func (p *Parser) onCSVCMsg_PacketEntities(m *dota.CSVCMsg_PacketEntities) error {
+	return p.processPacketEntities(m.GetEntityData(), m.GetUpdatedEntries(), m.GetLegacyIsDelta())
+}
+
+// processPacketEntities is the core of the PacketEntities handler. It takes
+// the three envelope fields the parser actually uses so the fast envelope
+// path (envelope_fast.go) can call it without materializing a proto message.
+func (p *Parser) processPacketEntities(entityData []byte, updatedEntries int32, isDelta bool) error {
+	r := &p.entityReader
+	r.reset(entityData)
+
+	var index = int32(-1)
+	var updates = int(updatedEntries)
+	var cmd uint32
+	var classId int32
+	var serial int32
+	var e *Entity
+	var op EntityOp
+
+	if !isDelta {
+		if p.entityFullPackets > 0 {
+			return nil
+		}
+		p.entityFullPackets++
+	}
+
+	tuples := p.entityTuples[:0]
+
+	for ; updates > 0; updates-- {
+		index += int32(r.readUBitVar()) + 1
+		op = EntityOpNone
+
+		cmd = r.readBits(2)
+		if cmd&0x01 == 0 {
+			if cmd&0x02 != 0 {
+				classId = int32(r.readBits(p.classIdSize))
+				serial = int32(r.readBits(17))
+				r.readVarUint32()
+
+				class := p.classesById[classId]
+				if class == nil {
+					_panicf("unable to find new class %d", classId)
+				}
+
+				// Decode the class baseline once into a reusable template and
+				// clone it for each new entity, instead of re-decoding the raw
+				// baseline bytes on every creation.
+				baseline := p.classBaselineStates[classId]
+				if baseline == nil {
+					raw := p.classBaselines[classId]
+					if raw == nil {
+						_panicf("unable to find new baseline %d", classId)
+					}
+					baseline = newFieldState()
+					p.fpBuf = readFields(newReader(raw), class.serializer, baseline, p.fpBuf)
+					p.classBaselineStates[classId] = baseline
+				}
+
+				e = newEntity(index, serial, class)
+				e.state = baseline.clone()
+				p.entities[index] = e
+				p.fpBuf = readFields(r, class.serializer, e.state, p.fpBuf)
+				op = EntityOpCreated | EntityOpEntered
+
+			} else {
+				if e = p.entities[index]; e == nil {
+					_panicf("unable to find existing entity %d", index)
+				}
+
+				op = EntityOpUpdated
+				if !e.active {
+					e.active = true
+					op |= EntityOpEntered
+				}
+
+				p.fpBuf = readFields(r, e.class.serializer, e.state, p.fpBuf)
+			}
+
+		} else {
+			if e = p.entities[index]; e == nil {
+				_panicf("unable to find existing entity %d", index)
+			}
+
+			if !e.active {
+				_panicf("entity %d (%s) ordered to leave, already inactive", e.class.classId, e.class.name)
+			}
+
+			op = EntityOpLeft
+			if cmd&0x02 != 0 {
+				op |= EntityOpDeleted
+				p.entities[index] = nil
+			}
+		}
+
+		tuples = append(tuples, entityOpTuple{e, op})
+	}
+
+	var err error
+dispatch:
+	for _, h := range p.entityHandlers {
+		for i := range tuples {
+			if err = h(tuples[i].e, tuples[i].op); err != nil {
+				break dispatch
+			}
+		}
+	}
+
+	// Release the entity references and keep the buffer at length zero so a
+	// reused backing array does not retain (possibly deleted) entities and their
+	// state. This runs on every path (success or error), before the single
+	// return.
+	clear(tuples)
+	p.entityTuples = tuples[:0]
+	return err
+}
+
+// OnEntity registers an EntityHandler that will be called when an entity
+// is created, updated, deleted, etc.
+func (p *Parser) OnEntity(h EntityHandler) {
+	p.entityHandlers = append(p.entityHandlers, h)
+}

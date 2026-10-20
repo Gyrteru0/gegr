@@ -1,0 +1,339 @@
+package manta
+
+import (
+	"github.com/dotabuff/manta/dota"
+	"github.com/golang/snappy"
+)
+
+const (
+	stringtableKeyHistorySize = 32
+)
+
+// Holds and maintains the string table information for an
+// instance of the Parser.
+type stringTables struct {
+	Tables    map[int32]*stringTable
+	NameIndex map[string]int32
+	nextIndex int32
+}
+
+// Retrieves a string table by its name. Check the bool.
+func (ts *stringTables) GetTableByName(name string) (*stringTable, bool) {
+	i, ok := ts.NameIndex[name]
+	if !ok {
+		return nil, false
+	}
+	t, ok := ts.Tables[i]
+	return t, ok
+}
+
+// Creates a new empty StringTables.
+func newStringTables() *stringTables {
+	return &stringTables{
+		Tables:    make(map[int32]*stringTable),
+		NameIndex: make(map[string]int32),
+		nextIndex: 0,
+	}
+}
+
+// Holds and maintains the information for a string table.
+type stringTable struct {
+	index             int32
+	name              string
+	Items             map[int32]*stringTableItem
+	userDataFixedSize bool
+	userDataSizeBits  int32
+	flags             int32
+	varintBitCounts   bool
+}
+
+func (st *stringTable) GetIndex() int32                      { return st.index }
+func (st *stringTable) GetName() string                      { return st.name }
+func (st *stringTable) GetItem(index int32) *stringTableItem { return st.Items[index] }
+
+// Holds and maintains a single entry in a string table.
+type stringTableItem struct {
+	Index int32
+	Key   string
+	Value []byte
+}
+
+// Internal callback for CDemoStringTables.
+// These appear to be periodic state dumps and appear every 1800 outer ticks.
+// XXX TODO: decide if we want to at all integrate these updates,
+// or trust create/update entirely. Let's ignore them for now.
+func (p *Parser) onCDemoStringTables(m *dota.CDemoStringTables) error {
+	return nil
+}
+
+// Internal callback for CSVCMsg_CreateStringTable.
+// XXX TODO: This is currently using an artificial, internally crafted message.
+// This should be replaced with the real message once we have updated protos.
+func (p *Parser) onCSVCMsg_CreateStringTable(m *dota.CSVCMsg_CreateStringTable) error {
+	// Create a new string table at the next index position
+	t := &stringTable{
+		index:             p.stringTables.nextIndex,
+		name:              m.GetName(),
+		Items:             make(map[int32]*stringTableItem),
+		userDataFixedSize: m.GetUserDataFixedSize(),
+		userDataSizeBits:  m.GetUserDataSizeBits(),
+		flags:             m.GetFlags(),
+		varintBitCounts:   m.GetUsingVarintBitcounts(),
+	}
+
+	// Increment the index
+	p.stringTables.nextIndex += 1
+
+	// Decompress the data if necessary
+	buf := m.GetStringData()
+	if m.GetDataCompressed() {
+		// old replays = lzss
+		// new replays = snappy
+
+		r := newReader(buf)
+		var err error
+
+		if s := r.readStringN(4); s != "LZSS" {
+			if buf, err = snappy.Decode(nil, buf); err != nil {
+				return err
+			}
+		} else {
+			if buf, err = unlzss(buf); err != nil {
+				return err
+			}
+		}
+	}
+
+	// Parse the items out of the string table data
+	items, err := parseStringTable(buf, m.GetNumEntries(), t.name, t.userDataFixedSize, t.userDataSizeBits, t.flags, t.varintBitCounts)
+	if err != nil {
+		return err
+	}
+
+	// Insert the items into the table
+	for _, item := range items {
+		t.Items[item.Index] = item
+	}
+
+	// Add the table to the parser state
+	p.stringTables.Tables[t.index] = t
+	p.stringTables.NameIndex[t.name] = t.index
+
+	// Apply the updates to baseline state
+	if t.name == "instancebaseline" {
+		p.updateInstanceBaseline()
+	}
+
+	// Emit events for modifier table entry updates
+	if t.name == "ActiveModifiers" {
+		if err := p.emitModifierTableEvents(items); err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+// Internal callback for CSVCMsg_UpdateStringTable.
+func (p *Parser) onCSVCMsg_UpdateStringTable(m *dota.CSVCMsg_UpdateStringTable) error {
+	return p.processUpdateStringTable(m.GetTableId(), m.GetNumChangedEntries(), m.GetStringData())
+}
+
+// processUpdateStringTable is the core of the UpdateStringTable handler. It
+// takes the three envelope fields the parser actually uses so the fast
+// envelope path (envelope_fast.go) can call it without materializing a proto
+// message.
+func (p *Parser) processUpdateStringTable(tableId, numChanged int32, data []byte) error {
+	// TODO: integrate
+	t, ok := p.stringTables.Tables[tableId]
+	if !ok {
+		_panicf("missing string table %d", tableId)
+	}
+
+	if v(5) {
+		_debugf("tick=%d name=%s changedEntries=%d size=%d", p.Tick, t.name, numChanged, len(data))
+	}
+
+	// Parse the updates out of the string table data
+	items, err := parseStringTable(data, numChanged, t.name, t.userDataFixedSize, t.userDataSizeBits, t.flags, t.varintBitCounts)
+	if err != nil {
+		return err
+	}
+
+	// Apply the updates to the parser state
+	for _, item := range items {
+		if existing, ok := t.Items[item.Index]; ok {
+			if item.Key != "" && item.Key != existing.Key {
+				existing.Key = item.Key
+			}
+			if len(item.Value) > 0 {
+				existing.Value = item.Value
+			}
+		} else {
+			t.Items[item.Index] = item
+		}
+	}
+
+	// Apply the updates to baseline state
+	if t.name == "instancebaseline" {
+		p.updateInstanceBaseline()
+	}
+
+	// Emit events for modifier table entry updates
+	if t.name == "ActiveModifiers" {
+		if err := p.emitModifierTableEvents(items); err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+// Parse a string table data blob, returning a list of item updates.
+func parseStringTable(buf []byte, numUpdates int32, name string, userDataFixed bool, userDataSizeBits int32, flags int32, varintBitCounts bool) (items []*stringTableItem, err error) {
+	// Surface a decode failure instead of silently returning a partially
+	// populated table, matching clarity's fail-loud behaviour. On healthy
+	// replays this never fires.
+	defer func() {
+		if r := recover(); r != nil {
+			err = _errorf("unable to parse string table %s: %v", name, r)
+		}
+	}()
+
+	// Preallocate the result and back the items with a single slab so a large
+	// update costs two allocations instead of one per item plus append growth.
+	// The cap is bounded so a corrupt numUpdates cannot trigger a huge
+	// allocation; append simply grows past it if a table is legitimately larger.
+	prealloc := int(numUpdates)
+	if prealloc > 4096 {
+		prealloc = 4096
+	}
+	items = make([]*stringTableItem, 0, prealloc)
+	slab := make([]stringTableItem, 0, prealloc)
+
+	// Create a reader for the buffer
+	r := newReader(buf)
+
+	// Start with an index of -1.
+	// If the first item is at index 0 it will use a incr operation.
+	index := int32(-1)
+
+	// Maintain a ring buffer of key history. histCount is the total number of
+	// keys ever appended; the ring holds the most recent
+	// stringtableKeyHistorySize of them, so history position pos (counted from
+	// the oldest retained key) lives at (histCount-size+pos) mod size once the
+	// ring is full, and at pos before that.
+	var keyHist [stringtableKeyHistorySize]string
+	histCount := 0
+
+	// Some tables have no data
+	if len(buf) == 0 {
+		return items, nil
+	}
+
+	// Loop through entries in the data structure
+	//
+	// Each entry is a tuple consisting of {index, key, value}
+	//
+	// Index can either be incremented from the previous position or
+	// overwritten with a given entry.
+	//
+	// Key may be omitted (will be represented here as "")
+	//
+	// Value may be omitted
+	for i := 0; i < int(numUpdates); i++ {
+		key := ""
+		value := []byte{}
+
+		// Read a boolean to determine whether the operation is an increment or
+		// has a fixed index position. A fixed index position of zero should be
+		// the last data in the buffer, and indicates that all data has been read.
+		incr := r.readBoolean()
+		if incr {
+			index++
+		} else {
+			// The non-increment delta is additive (relative to the running
+			// index), matching the S2 entity decoder (see entity.go) and
+			// clarity's S2StringTableEmitter. The previous absolute form
+			// (= varuint+1) produced wrong, non-monotonic indices for
+			// delta-updated tables such as ActiveModifiers.
+			index += int32(r.readVarUint32()) + 2
+		}
+
+		// Some values have keys, some don't.
+		hasKey := r.readBoolean()
+		if hasKey {
+			// Some entries use reference a position in the key history for
+			// part of the key. If referencing the history, read the position
+			// and size from the buffer, then use those to build the string
+			// combined with an extra string read (null terminated).
+			// Alternatively, just read the string.
+			useHistory := r.readBoolean()
+			if useHistory {
+				pos := r.readBits(5)
+				size := r.readBits(5)
+
+				retained := histCount
+				if retained > stringtableKeyHistorySize {
+					retained = stringtableKeyHistorySize
+				}
+				if int(pos) >= retained {
+					key += r.readString()
+				} else {
+					abs := int(pos)
+					if histCount > stringtableKeyHistorySize {
+						abs = histCount - stringtableKeyHistorySize + int(pos)
+					}
+					s := keyHist[abs%stringtableKeyHistorySize]
+					if int(size) > len(s) {
+						key += s + r.readString()
+					} else {
+						key += s[0:size] + r.readString()
+					}
+				}
+			} else {
+				key = r.readString()
+			}
+
+			keyHist[histCount%stringtableKeyHistorySize] = key
+			histCount++
+		}
+
+		// Some entries have a value.
+		hasValue := r.readBoolean()
+		if hasValue {
+			bitSize := uint32(0)
+			isCompressed := false
+			if userDataFixed {
+				bitSize = uint32(userDataSizeBits)
+			} else {
+				if (flags & 0x1) != 0 {
+					isCompressed = r.readBoolean()
+				}
+				if varintBitCounts {
+					bitSize = r.readUBitVar() * 8
+				} else {
+					bitSize = r.readBits(17) * 8
+				}
+			}
+			value = r.readBitsAsBytes(bitSize)
+
+			if isCompressed {
+				tmp, err := snappy.Decode(nil, value)
+				if err != nil {
+					_panicf("unable to decode snappy compressed stringtable item (%s, %d, %s): %s", name, index, key, err)
+				}
+				value = tmp
+			}
+		}
+
+		// Append to the slab and take the address of the slab element. If the
+		// slab regrows, previously taken pointers keep referencing the old
+		// backing array; that is safe because items are only ever read and
+		// mutated through those pointers, never through the slab again.
+		slab = append(slab, stringTableItem{index, key, value})
+		items = append(items, &slab[len(slab)-1])
+	}
+
+	return items, nil
+}
