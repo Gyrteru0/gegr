@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "chat_events": 5,
+    "combatlog": 2410,
+    "game_events": 140,
+    "modifiers": 4974,
+    "unit_orders": 1377
+  },
+  "file_header": {
+    "addons": "",
+    "allow_clientside_entities": true,
+    "allow_clientside_particles": true,
+    "build_num": 10938,
+    "client_name": "SourceTV Demo",
+    "demo_file_stamp": "PBDEMS2\u0000",
+    "demo_version_guid": "8e9d71ab-04a1-4c01-bb61-acfede27c046",
+    "demo_version_name": "valve_demo_2",
+    "fullpackets_version": 2,
+    "game_directory": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\dota 2 beta\\game\\dota",
+    "map_name": "start",
+    "patch_version": 48,
+    "server_name": "ShaNachnetsya",
+    "server_start_tick": 188
+  },
+  "file_info": {
+    "playback_frames": 9892,
+    "playback_ticks": 19784,
+    "playback_time": 659.4667
+  },
+  "final_tick": 19784,
+  "game_build": 999999,
+  "input_file": "auto-20261020-1617-start-ShaNachnetsya.dem"
+}

@@ -1,0 +1,555 @@
+{
+ "decoded": "example/auto-20261020-1617-start-ShaNachnetsya_decoded",
+ "lane": "мид",
+ "duration_s": 554.3,
+ "duration_clock": "09:14",
+ "players": [
+  {
+   "player_id": 0,
+   "name": "ShaNachnetsya",
+   "hero": "Nevermore",
+   "team": "Radiant",
+   "team_num": 2,
+   "is_bot": false,
+   "hero_internal": "npc_dota_hero_shadow_fiend"
+  },
+  {
+   "player_id": 1,
+   "name": null,
+   "hero": "Nevermore",
+   "team": "Dire",
+   "team_num": 3,
+   "is_bot": true,
+   "hero_internal": "npc_dota_hero_shadow_fiend"
+  }
+ ],
+ "mirror_matchup": true,
+ "score_kills": {
+  "0": 0,
+  "1": 0
+ },
+ "minutes": [
+  {
+   "minute": 0,
+   "clock": "00:00",
+   "p0": {
+    "last_hits": 0,
+    "denies": 0,
+    "net_worth": 602,
+    "total_gold": 2,
+    "total_xp": 0,
+    "level": 1,
+    "hp_pct": 100,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 0
+   },
+   "p1": {
+    "last_hits": 0,
+    "denies": 0,
+    "net_worth": 602,
+    "total_gold": 2,
+    "total_xp": 0,
+    "level": 1,
+    "hp_pct": 100,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 0
+   },
+   "nw_diff": 0,
+   "xp_diff": 0,
+   "wave": {
+    "x": -366,
+    "y": -334,
+    "creeps_radiant": 6.8,
+    "creeps_dire": 6.8,
+    "region": "мид (сторона Radiant)"
+   },
+   "tower_Dire T1 мид": 1800,
+   "tower_Radiant T1 мид": 1800
+  },
+  {
+   "minute": 1,
+   "clock": "01:00",
+   "p0": {
+    "last_hits": 3,
+    "denies": 2,
+    "net_worth": 830,
+    "total_gold": 230,
+    "total_xp": 279,
+    "level": 2,
+    "hp_pct": 50,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 3
+   },
+   "p1": {
+    "last_hits": 1,
+    "denies": 3,
+    "net_worth": 728,
+    "total_gold": 128,
+    "total_xp": 233,
+    "level": 1,
+    "hp_pct": 61,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 1
+   },
+   "nw_diff": 102,
+   "xp_diff": 46,
+   "wave": {
+    "x": -535,
+    "y": -456,
+    "creeps_radiant": 6.8,
+    "creeps_dire": 7.4,
+    "region": "мид (сторона Radiant)"
+   },
+   "tower_Dire T1 мид": 1800,
+   "tower_Radiant T1 мид": 1800
+  },
+  {
+   "minute": 2,
+   "clock": "02:00",
+   "p0": {
+    "last_hits": 7,
+    "denies": 4,
+    "net_worth": 883,
+    "total_gold": 463,
+    "total_xp": 690,
+    "level": 3,
+    "hp_pct": 77,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 7
+   },
+   "p1": {
+    "last_hits": 3,
+    "denies": 3,
+    "net_worth": 614,
+    "total_gold": 289,
+    "total_xp": 643,
+    "level": 3,
+    "hp_pct": 44,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 3
+   },
+   "nw_diff": 269,
+   "xp_diff": 47,
+   "wave": {
+    "x": -544,
+    "y": -463,
+    "creeps_radiant": 7.0,
+    "creeps_dire": 6.7,
+    "region": "мид (сторона Radiant)"
+   },
+   "tower_Dire T1 мид": 1800,
+   "tower_Radiant T1 мид": 1774
+  },
+  {
+   "minute": 3,
+   "clock": "03:00",
+   "p0": {
+    "last_hits": 14,
+    "denies": 8,
+    "net_worth": 1247,
+    "total_gold": 827,
+    "total_xp": 1161,
+    "level": 4,
+    "hp_pct": 83,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 14
+   },
+   "p1": {
+    "last_hits": 5,
+    "denies": 3,
+    "net_worth": 725,
+    "total_gold": 500,
+    "total_xp": 976,
+    "level": 3,
+    "hp_pct": 74,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 5
+   },
+   "nw_diff": 522,
+   "xp_diff": 185,
+   "wave": {
+    "x": -336,
+    "y": -311,
+    "creeps_radiant": 6.6,
+    "creeps_dire": 6.3,
+    "region": "мид (сторона Radiant)"
+   },
+   "tower_Dire T1 мид": 1800,
+   "tower_Radiant T1 мид": 1774
+  },
+  {
+   "minute": 4,
+   "clock": "04:00",
+   "p0": {
+    "last_hits": 20,
+    "denies": 11,
+    "net_worth": 1582,
+    "total_gold": 1162,
+    "total_xp": 1557,
+    "level": 4,
+    "hp_pct": 99,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 20
+   },
+   "p1": {
+    "last_hits": 7,
+    "denies": 4,
+    "net_worth": 936,
+    "total_gold": 711,
+    "total_xp": 1366,
+    "level": 4,
+    "hp_pct": 87,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 7
+   },
+   "nw_diff": 646,
+   "xp_diff": 191,
+   "wave": {
+    "x": -275,
+    "y": -299,
+    "creeps_radiant": 8.0,
+    "creeps_dire": 6.4,
+    "region": "мид (сторона Radiant)"
+   },
+   "tower_Dire T1 мид": 1800,
+   "tower_Radiant T1 мид": 1774
+  },
+  {
+   "minute": 5,
+   "clock": "05:00",
+   "p0": {
+    "last_hits": 24,
+    "denies": 14,
+    "net_worth": 1661,
+    "total_gold": 1401,
+    "total_xp": 2005,
+    "level": 5,
+    "hp_pct": 59,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 20
+   },
+   "p1": {
+    "last_hits": 10,
+    "denies": 5,
+    "net_worth": 1072,
+    "total_gold": 912,
+    "total_xp": 1882,
+    "level": 5,
+    "hp_pct": 50,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 10
+   },
+   "nw_diff": 589,
+   "xp_diff": 123,
+   "wave": {
+    "x": -280,
+    "y": -222,
+    "creeps_radiant": 8.3,
+    "creeps_dire": 6.9,
+    "region": "мид (сторона Radiant)"
+   },
+   "tower_Dire T1 мид": 1784,
+   "tower_Radiant T1 мид": 1774
+  },
+  {
+   "minute": 6,
+   "clock": "06:00",
+   "p0": {
+    "last_hits": 30,
+    "denies": 14,
+    "net_worth": 2048,
+    "total_gold": 1788,
+    "total_xp": 2519,
+    "level": 6,
+    "hp_pct": 53,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 20
+   },
+   "p1": {
+    "last_hits": 11,
+    "denies": 5,
+    "net_worth": 1453,
+    "total_gold": 1393,
+    "total_xp": 2056,
+    "level": 5,
+    "hp_pct": 6,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 11
+   },
+   "nw_diff": 595,
+   "xp_diff": 463,
+   "wave": {
+    "x": -422,
+    "y": -209,
+    "creeps_radiant": 7.0,
+    "creeps_dire": 7.5,
+    "region": "мид (сторона Radiant)"
+   },
+   "tower_Dire T1 мид": 1468,
+   "tower_Radiant T1 мид": 1774
+  },
+  {
+   "minute": 7,
+   "clock": "07:00",
+   "p0": {
+    "last_hits": 34,
+    "denies": 14,
+    "net_worth": 2279,
+    "total_gold": 2084,
+    "total_xp": 2831,
+    "level": 6,
+    "hp_pct": 41,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 20
+   },
+   "p1": {
+    "last_hits": 12,
+    "denies": 5,
+    "net_worth": 1847,
+    "total_gold": 1887,
+    "total_xp": 2242,
+    "level": 5,
+    "hp_pct": 71,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 12
+   },
+   "nw_diff": 432,
+   "xp_diff": 589,
+   "wave": {
+    "x": 181,
+    "y": 121,
+    "creeps_radiant": 7.5,
+    "creeps_dire": 5.2,
+    "region": "мид (сторона Dire)"
+   },
+   "tower_Dire T1 мид": 1215,
+   "tower_Radiant T1 мид": 1774
+  },
+  {
+   "minute": 8,
+   "clock": "08:00",
+   "p0": {
+    "last_hits": 39,
+    "denies": 14,
+    "net_worth": 2569,
+    "total_gold": 2374,
+    "total_xp": 3283,
+    "level": 7,
+    "hp_pct": 66,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 20
+   },
+   "p1": {
+    "last_hits": 13,
+    "denies": 6,
+    "net_worth": 2351,
+    "total_gold": 2391,
+    "total_xp": 2571,
+    "level": 6,
+    "hp_pct": 40,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 13
+   },
+   "nw_diff": 218,
+   "xp_diff": 712,
+   "wave": {
+    "x": -12,
+    "y": -113,
+    "creeps_radiant": 7.4,
+    "creeps_dire": 5.6,
+    "region": "мид (сторона Radiant)"
+   },
+   "tower_Dire T1 мид": 348,
+   "tower_Radiant T1 мид": 1774
+  },
+  {
+   "minute": 9,
+   "clock": "09:00",
+   "p0": {
+    "last_hits": 46,
+    "denies": 15,
+    "net_worth": 2987,
+    "total_gold": 2792,
+    "total_xp": 3782,
+    "level": 7,
+    "hp_pct": 59,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 20
+   },
+   "p1": {
+    "last_hits": 13,
+    "denies": 6,
+    "net_worth": 2701,
+    "total_gold": 2841,
+    "total_xp": 2802,
+    "level": 6,
+    "hp_pct": 41,
+    "necro_level": 1,
+    "alive": true,
+    "souls_est": 13
+   },
+   "nw_diff": 286,
+   "xp_diff": 980,
+   "wave": {
+    "x": 754,
+    "y": 610,
+    "creeps_radiant": 8.0,
+    "creeps_dire": 4.0,
+    "region": "мид (сторона Dire)"
+   },
+   "tower_Dire T1 мид": 0,
+   "tower_Radiant T1 мид": 1774
+  }
+ ],
+ "raze": {
+  "0": {
+   "by_tier": {
+    "shadowraze1": {
+     "casts": 7,
+     "hits_hero_attributed": 1,
+     "ambiguous": 0
+    },
+    "shadowraze2": {
+     "casts": 11,
+     "hits_hero_attributed": 4,
+     "ambiguous": 4
+    },
+    "shadowraze3": {
+     "casts": 23,
+     "hits_hero_attributed": 12,
+     "ambiguous": 8
+    }
+   },
+   "casts": 41,
+   "hits": 17,
+   "ambiguous": 12,
+   "accuracy_attributed_pct": 58.6
+  },
+  "1": {
+   "by_tier": {
+    "shadowraze1": {
+     "casts": 0,
+     "hits_hero_attributed": 0,
+     "ambiguous": 0
+    },
+    "shadowraze2": {
+     "casts": 9,
+     "hits_hero_attributed": 6,
+     "ambiguous": 3
+    },
+    "shadowraze3": {
+     "casts": 14,
+     "hits_hero_attributed": 6,
+     "ambiguous": 8
+    }
+   },
+   "casts": 23,
+   "hits": 12,
+   "ambiguous": 11,
+   "accuracy_attributed_pct": 100.0
+  }
+ },
+ "raze_damage_pair": {
+  "shadowraze1": {
+   "hits_events": 1,
+   "damage": 138
+  },
+  "shadowraze2": {
+   "hits_events": 10,
+   "damage": 1481
+  },
+  "shadowraze3": {
+   "hits_events": 20,
+   "damage": 2289
+  }
+ },
+ "hero_damage_pair_total": 6087,
+ "hero_damage_by_inflictor_top": {
+  "nevermore_shadowraze3": 2289,
+  "(атака)": 2179,
+  "nevermore_shadowraze2": 1481,
+  "nevermore_shadowraze1": 138
+ },
+ "hero_damage_by_attacker": null,
+ "deaths": {
+  "0": [],
+  "1": []
+ },
+ "retreats": {
+  "0": [
+   {
+    "clock": "06:01",
+    "game_time_s": 361.9,
+    "min_hp_pct": 8,
+    "to_fountain": false,
+    "dist_gain": 1720
+   },
+   {
+    "clock": "06:29",
+    "game_time_s": 389.9,
+    "min_hp_pct": 22,
+    "to_fountain": false,
+    "dist_gain": 1587
+   }
+  ],
+  "1": [
+   {
+    "clock": "05:49",
+    "game_time_s": 349.9,
+    "min_hp_pct": 5,
+    "to_fountain": false,
+    "dist_gain": 2813
+   },
+   {
+    "clock": "08:09",
+    "game_time_s": 489.9,
+    "min_hp_pct": 11,
+    "to_fountain": false,
+    "dist_gain": 3075
+   },
+   {
+    "clock": "08:48",
+    "game_time_s": 528.9,
+    "min_hp_pct": 34,
+    "to_fountain": false,
+    "dist_gain": 1651
+   }
+  ]
+ },
+ "towers_t1": {
+  "Dire T1 мид": {
+   "first_damage_clock": "04:40",
+   "hp_min": 0,
+   "hp_final": 0,
+   "hp_max": 1800
+  },
+  "Radiant T1 мид": {
+   "first_damage_clock": "01:43",
+   "hp_min": 1774,
+   "hp_final": 1774,
+   "hp_max": 1800
+  }
+ },
+ "notes": [
+  "Зеркальный матчап: боевой лог не различает двух одинаковых героев. Касты посчитаны по кулдаунам снимков индивидуально; урон и души из лога — на пару (души по игрокам — оценка по ластхитам, смерть делит пополам)."
+ ]
+}

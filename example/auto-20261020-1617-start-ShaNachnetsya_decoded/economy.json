@@ -1,0 +1,100 @@
+{
+ "series": [
+  {
+   "minute": 0,
+   "clock": "00:00",
+   "radiant_networth": 602,
+   "dire_networth": 3010,
+   "diff": -2408,
+   "radiant_xp": 0,
+   "dire_xp": 0
+  },
+  {
+   "minute": 1,
+   "clock": "01:00",
+   "radiant_networth": 832,
+   "dire_networth": 3498,
+   "diff": -2666,
+   "radiant_xp": 279,
+   "dire_xp": 233
+  },
+  {
+   "minute": 2,
+   "clock": "02:00",
+   "radiant_networth": 885,
+   "dire_networth": 3744,
+   "diff": -2859,
+   "radiant_xp": 690,
+   "dire_xp": 643
+  },
+  {
+   "minute": 3,
+   "clock": "03:00",
+   "radiant_networth": 1249,
+   "dire_networth": 4215,
+   "diff": -2966,
+   "radiant_xp": 1161,
+   "dire_xp": 976
+  },
+  {
+   "minute": 4,
+   "clock": "04:00",
+   "radiant_networth": 1584,
+   "dire_networth": 4786,
+   "diff": -3202,
+   "radiant_xp": 1557,
+   "dire_xp": 1366
+  },
+  {
+   "minute": 5,
+   "clock": "05:00",
+   "radiant_networth": 1663,
+   "dire_networth": 5282,
+   "diff": -3619,
+   "radiant_xp": 2005,
+   "dire_xp": 1882
+  },
+  {
+   "minute": 6,
+   "clock": "06:00",
+   "radiant_networth": 2050,
+   "dire_networth": 5667,
+   "diff": -3617,
+   "radiant_xp": 2519,
+   "dire_xp": 2056
+  },
+  {
+   "minute": 7,
+   "clock": "07:00",
+   "radiant_networth": 2281,
+   "dire_networth": 6061,
+   "diff": -3780,
+   "radiant_xp": 2831,
+   "dire_xp": 2242
+  },
+  {
+   "minute": 8,
+   "clock": "08:00",
+   "radiant_networth": 2571,
+   "dire_networth": 6565,
+   "diff": -3994,
+   "radiant_xp": 3283,
+   "dire_xp": 2571
+  },
+  {
+   "minute": 9,
+   "clock": "09:00",
+   "radiant_networth": 2989,
+   "dire_networth": 6915,
+   "diff": -3926,
+   "radiant_xp": 3782,
+   "dire_xp": 2802
+  }
+ ],
+ "biggest_swing_1min": {
+  "from_minute": 4,
+  "to_minute": 5,
+  "change": -417
+ },
+ "final_diff": -3926
+}

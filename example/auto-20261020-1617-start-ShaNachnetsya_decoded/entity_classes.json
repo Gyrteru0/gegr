@@ -1,0 +1,897 @@
+[
+  {
+    "class": "CDOTA_BaseNPC_Creep_Neutral",
+    "entity_events": 413808,
+    "alive_at_end": 185
+  },
+  {
+    "class": "CDOTA_BaseNPC_Creep_Lane",
+    "entity_events": 58966,
+    "alive_at_end": 12
+  },
+  {
+    "class": "CDOTA_Unit_Courier",
+    "entity_events": 57885,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Unit_Hero_Beastmaster",
+    "entity_events": 38588,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_BaseNPC_Tower",
+    "entity_events": 28343,
+    "alive_at_end": 22
+  },
+  {
+    "class": "CDOTA_Unit_Hero_Nevermore",
+    "entity_events": 19294,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTAPlayerController",
+    "entity_events": 10389,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTAGamerulesProxy",
+    "entity_events": 9892,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Unit_Roshan",
+    "entity_events": 6453,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Item_TeleportScroll",
+    "entity_events": 6046,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_DataDire",
+    "entity_events": 4309,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_DataRadiant",
+    "entity_events": 4062,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_Nevermore_Shadowraze3",
+    "entity_events": 2058,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_DataSpectator",
+    "entity_events": 1271,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTAPlayerPawn",
+    "entity_events": 1200,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_Nevermore_Shadowraze2",
+    "entity_events": 1127,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Item_MagicStick",
+    "entity_events": 1040,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTAFogOfWarTempViewers",
+    "entity_events": 1009,
+    "alive_at_end": 10
+  },
+  {
+    "class": "CDOTA_BaseNPC_Creep_Siege",
+    "entity_events": 848,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTASpectatorGraphManagerProxy",
+    "entity_events": 634,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_Nevermore_Shadowraze1",
+    "entity_events": 475,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_NPC_Observer_Ward",
+    "entity_events": 310,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CParticleSystem",
+    "entity_events": 227,
+    "alive_at_end": 226
+  },
+  {
+    "class": "CDOTA_Ability_Neutral_Upgrade",
+    "entity_events": 221,
+    "alive_at_end": 185
+  },
+  {
+    "class": "CDOTA_Ability_Creep_Irresolute",
+    "entity_events": 219,
+    "alive_at_end": 9
+  },
+  {
+    "class": "CDOTA_Ability_Frogmen_Riverborn_Aura",
+    "entity_events": 90,
+    "alive_at_end": 54
+  },
+  {
+    "class": "CDOTA_Ability_Creep_Piercing",
+    "entity_events": 85,
+    "alive_at_end": 15
+  },
+  {
+    "class": "CDOTA_Ability_Special_Bonus_Base",
+    "entity_events": 64,
+    "alive_at_end": 8
+  },
+  {
+    "class": "CDOTA_Ability_Creep_Siege",
+    "entity_events": 59,
+    "alive_at_end": 51
+  },
+  {
+    "class": "CDOTA_Item_RingOfProtection",
+    "entity_events": 48,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_BackdoorProtectionInBase",
+    "entity_events": 41,
+    "alive_at_end": 37
+  },
+  {
+    "class": "CDOTA_DataCustomTeam",
+    "entity_events": 40,
+    "alive_at_end": 8
+  },
+  {
+    "class": "CDOTA_Ability_Frogmen_ArmOfTheDeep",
+    "entity_events": 40,
+    "alive_at_end": 24
+  },
+  {
+    "class": "CDOTA_Ability_FlagBearer_Creep_Aura_Effect",
+    "entity_events": 30,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_NeutralSpawner",
+    "entity_events": 28,
+    "alive_at_end": 28
+  },
+  {
+    "class": "CDOTA_PlayerResource",
+    "entity_events": 21,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_NPC_Lantern",
+    "entity_events": 20,
+    "alive_at_end": 10
+  },
+  {
+    "class": "CDOTA_BaseNPC_Barracks",
+    "entity_events": 18,
+    "alive_at_end": 12
+  },
+  {
+    "class": "CDOTA_Ability_Frogmen_WaterBubble_Small",
+    "entity_events": 18,
+    "alive_at_end": 10
+  },
+  {
+    "class": "CDOTATeam",
+    "entity_events": 17,
+    "alive_at_end": 15
+  },
+  {
+    "class": "CDOTA_BaseNPC_Filler",
+    "entity_events": 15,
+    "alive_at_end": 13
+  },
+  {
+    "class": "CDOTA_Item_IronwoodBranch",
+    "entity_events": 13,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Item_ObserverWard",
+    "entity_events": 12,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_Courier_TakeStashItems",
+    "entity_events": 12,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_BaseNPC_Shop",
+    "entity_events": 12,
+    "alive_at_end": 4
+  },
+  {
+    "class": "CDOTA_Ability_MudGolem_CloakAura",
+    "entity_events": 12,
+    "alive_at_end": 12
+  },
+  {
+    "class": "CDOTA_Item_Rune",
+    "entity_events": 11,
+    "alive_at_end": 5
+  },
+  {
+    "class": "CDOTA_Ability_SatyrSoulstealer_ManaBurn",
+    "entity_events": 11,
+    "alive_at_end": 11
+  },
+  {
+    "class": "CDOTA_Ability_SatyrTrickster_Purge",
+    "entity_events": 11,
+    "alive_at_end": 11
+  },
+  {
+    "class": "CDOTA_Ability_ForestTrollHighPriest_ManaAura",
+    "entity_events": 11,
+    "alive_at_end": 11
+  },
+  {
+    "class": "CDOTA_Item_Enchanted_Mango",
+    "entity_events": 11,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_BaseNPC",
+    "entity_events": 11,
+    "alive_at_end": 4
+  },
+  {
+    "class": "CDOTA_Ability_Special_Bonus_Attributes",
+    "entity_events": 11,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Item_Bracer",
+    "entity_events": 10,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_Nevermore_Presence",
+    "entity_events": 10,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Item_Circlet",
+    "entity_events": 10,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_OgreBruiser_OgreSmash",
+    "entity_events": 10,
+    "alive_at_end": 10
+  },
+  {
+    "class": "CInfoPlayerStartGoodGuys",
+    "entity_events": 10,
+    "alive_at_end": 10
+  },
+  {
+    "class": "CInfoPlayerStartBadGuys",
+    "entity_events": 10,
+    "alive_at_end": 10
+  },
+  {
+    "class": "CDOTA_Item_Tango",
+    "entity_events": 9,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_KoboldTunneler_Prospecting",
+    "entity_events": 9,
+    "alive_at_end": 9
+  },
+  {
+    "class": "CDOTA_Ability_Generic_Hidden",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_Special_Bonus_Armor_4",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Item_RuneSpawner_Powerup",
+    "entity_events": 8,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Item_Recipe_Bracer",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDynamicProp",
+    "entity_events": 8,
+    "alive_at_end": 4
+  },
+  {
+    "class": "CDOTA_Ability_Beastmaster_WildAxes",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_Beastmaster_DrumsOfSlom",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_Special_Bonus_Unique_Beastmaster_5",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_Beastmaster_SummonRazorback",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_Beastmaster_InnerBeast",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_Beastmaster_Summon_Raptor",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_MudGolem_HurlBoulder",
+    "entity_events": 8,
+    "alive_at_end": 8
+  },
+  {
+    "class": "CDOTA_Item_Gauntlets",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_Special_Bonus_Unique_Beastmaster_6",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTAEmptyAbility",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_MudGolem_RockDestroy",
+    "entity_events": 8,
+    "alive_at_end": 8
+  },
+  {
+    "class": "CDOTA_Item_Flask",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_Beastmaster_PrimalRoar",
+    "entity_events": 8,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_NPC_BaseBlocker",
+    "entity_events": 8,
+    "alive_at_end": 4
+  },
+  {
+    "class": "CDOTA_Ability_CentaurKhan_WarStomp",
+    "entity_events": 8,
+    "alive_at_end": 8
+  },
+  {
+    "class": "CDOTAWearableItem",
+    "entity_events": 7,
+    "alive_at_end": 7
+  },
+  {
+    "class": "CBaseEntity",
+    "entity_events": 7,
+    "alive_at_end": 7
+  },
+  {
+    "class": "CInfoWorldLayer",
+    "entity_events": 6,
+    "alive_at_end": 4
+  },
+  {
+    "class": "CDOTA_Ability_Courier_Burst",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Ability_Courier_Morph",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Ability_Courier_AutoDeliver",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Ability_Courier_TakeStashAndTransferItems",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Ability_Courier_GoToSideShop2",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Ability_Courier_ReturnStashItems",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Ability_Courier_Shield",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Ability_Courier_TransferItems_ToOtherPlayer",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Ability_Courier_TransferItems",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_BaseNPC_NeutralItemStash",
+    "entity_events": 6,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_BaseNPC_Fort",
+    "entity_events": 6,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Unit_Fountain",
+    "entity_events": 6,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_GiantWolf_Intimidate",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Ability_Courier_GoToSecretShop",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_BaseNPC_HallofFame",
+    "entity_events": 6,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_Courier_GoToSideShop",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Item_RuneSpawner_Bounty",
+    "entity_events": 6,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_BackdoorProtection",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Ability_Courier_GoToEnemySecretShop",
+    "entity_events": 6,
+    "alive_at_end": 6
+  },
+  {
+    "class": "CDOTA_Item_Faerie_Fire",
+    "entity_events": 5,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_OgreMagi_FrostArmor",
+    "entity_events": 5,
+    "alive_at_end": 5
+  },
+  {
+    "class": "CDOTA_Item_GlovesOfHaste",
+    "entity_events": 4,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Item_BootsOfSpeed",
+    "entity_events": 4,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_TempTree",
+    "entity_events": 4,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_BaseNPC_Watch_Tower",
+    "entity_events": 4,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_Frogmen_WaterBubble_Medium",
+    "entity_events": 4,
+    "alive_at_end": 4
+  },
+  {
+    "class": "CDOTA_Item_PowerTreads",
+    "entity_events": 4,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CInfoPlayerStartDota",
+    "entity_events": 4,
+    "alive_at_end": 4
+  },
+  {
+    "class": "CDOTA_BaseNPC_XP_Fountain",
+    "entity_events": 4,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_BerserkerTroll_Break",
+    "entity_events": 4,
+    "alive_at_end": 4
+  },
+  {
+    "class": "CDOTA_Unit_Twin_Gate",
+    "entity_events": 4,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_KoboldTaskmaster_SpeedAura",
+    "entity_events": 4,
+    "alive_at_end": 4
+  },
+  {
+    "class": "CDOTA_Ability_FelBeast_Haunt",
+    "entity_events": 4,
+    "alive_at_end": 4
+  },
+  {
+    "class": "CDOTA_BaseNPC_Effigy_Statue",
+    "entity_events": 3,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CIngameEvent_DotaPlus",
+    "entity_events": 3,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_AlphaWolf_CommandAura",
+    "entity_events": 3,
+    "alive_at_end": 3
+  },
+  {
+    "class": "CIngameEvent_DarkCarnival",
+    "entity_events": 3,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Item_BootsOfElven",
+    "entity_events": 3,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_SatyrHellcaller_Shockwave",
+    "entity_events": 3,
+    "alive_at_end": 3
+  },
+  {
+    "class": "CDOTA_Ability_GnollAssassin_EnvenomedWeapon",
+    "entity_events": 3,
+    "alive_at_end": 3
+  },
+  {
+    "class": "CIngameEvent_SeasonalRewardLine",
+    "entity_events": 3,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Unit_Announcer",
+    "entity_events": 3,
+    "alive_at_end": 3
+  },
+  {
+    "class": "CDOTA_Unit_Announcer_Killing_Spree",
+    "entity_events": 3,
+    "alive_at_end": 3
+  },
+  {
+    "class": "CIngameEvent_PermanentGrants",
+    "entity_events": 3,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_Nevermore_Requiem",
+    "entity_events": 3,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_SatyrHellcaller_UnholyAura",
+    "entity_events": 3,
+    "alive_at_end": 3
+  },
+  {
+    "class": "CDOTA_Ability_Nevermore_Frenzy",
+    "entity_events": 3,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_AlphaWolf_CriticalStrike",
+    "entity_events": 3,
+    "alive_at_end": 3
+  },
+  {
+    "class": "CDOTA_Ability_Kobold_Disarm",
+    "entity_events": 3,
+    "alive_at_end": 3
+  },
+  {
+    "class": "CDOTA_Ability_Nevermore_Necromastery",
+    "entity_events": 3,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Item_Recipe_PowerTreads",
+    "entity_events": 2,
+    "alive_at_end": 0
+  },
+  {
+    "class": "CDOTA_Ability_Furbolg_Enrage_AttackSpeed",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_AncientRockGolem_Weakening_Aura",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_BaseNPC_LotusPool",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_EnragedWildkin_Tornado",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_FrostbittenGolem_TimeWarpAura",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_Ghost_FrostAttack",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_DarkTrollWarlord_Ensnare",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_Furbolg_Enrage_Damage",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_CentaurKhan_EnduranceAura",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_PolarFurbolgUrsaWarrior_ThunderClap",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_RoshanSpawner",
+    "entity_events": 2,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_BigThunderLizard_Wardrums",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_LotusPool",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_WarpineRaider_SeedShot",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_BlackDrake_MagicAmplification_Aura",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_XP_Fountain",
+    "entity_events": 2,
+    "alive_at_end": 2
+  },
+  {
+    "class": "CDOTA_Ability_GraniteGolem_HPAura",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_BlackDragon_DragonhideAura",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_BlackDragon_SplashAttack",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_BlackDragon_Fireball",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_Roshan_InherentBuffs",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_EnragedWildkin_Hurricane",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_Roshan_RevengeRoar",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_IceShaman_IncendiaryBomb",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_BigThunderLizard_Slam",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_MinibossSpawner",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_Roshan_Bash",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CTonemapController2",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CRagdollManager",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_ForestTrollHighPriest_Heal",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_Roshan_Devotion",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_Roshan_SpellBlock",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTAGameManagerProxy",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_DarkTrollWarlord_RaiseDead",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_Roshan_GrabThrow",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CWorld",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_EnragedWildkin_ToughnessAura",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_BigThunderLizard_Frenzy",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_Roshan_Slam",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CFogController",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTACameraBounds",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CSpeechBubbleManager",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Ability_ForestTrollHighPriest_HealAmp_Aura",
+    "entity_events": 1,
+    "alive_at_end": 1
+  },
+  {
+    "class": "CDOTA_Item_Aegis",
+    "entity_events": 1,
+    "alive_at_end": 1
+  }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "class": "CDOTA_NPC_Observer_Ward",
+  "team": "Dire",
+  "x": -514.8,
+  "y": 293.9,
+  "clock": "-00:57",
+  "game_time_s": -57.13,
+  "region": "мид (сторона Radiant)"
+ },
+ {
+  "class": "CDOTA_NPC_Observer_Ward",
+  "team": "Radiant",
+  "x": -192,
+  "y": -6.5,
+  "clock": "-00:56",
+  "game_time_s": -56.13,
+  "region": "мид (сторона Radiant)"
+ },
+ {
+  "class": "CDOTA_NPC_Observer_Ward",
+  "team": "Dire",
+  "x": -514.8,
+  "y": 293.9,
+  "clock": "06:35",
+  "game_time_s": 395.87,
+  "region": "мид (сторона Radiant)"
+ },
+ {
+  "class": "CDOTA_NPC_Observer_Ward",
+  "team": "Radiant",
+  "x": -154.8,
+  "y": -22.3,
+  "clock": "07:11",
+  "game_time_s": 431.87,
+  "region": "мид (сторона Radiant)"
+ }
+]

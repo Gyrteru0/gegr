@@ -1,0 +1,71 @@
+{
+ "demo": {
+  "file_size": 7643628,
+  "sha1": "cb35c030a84ccdc0",
+  "header": {
+   "demo_file_stamp": "PBDEMS2\u0000",
+   "patch_version": 48,
+   "server_name": "ShaNachnetsya",
+   "client_name": "SourceTV Demo",
+   "map_name": "start",
+   "game_directory": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\dota 2 beta\\game\\dota",
+   "fullpackets_version": 2,
+   "allow_clientside_entities": 1,
+   "allow_clientside_particles": 1,
+   "addons": "",
+   "demo_version_name": "valve_demo_2",
+   "demo_version_guid": "8e9d71ab-04a1-4c01-bb61-acfede27c046",
+   "build_num": 10938,
+   "server_start_tick": 188
+  },
+  "file_info": {
+   "playback_time": 659.467,
+   "playback_ticks": 19784,
+   "playback_frames": 9892
+  },
+  "outer_packets": {
+   "FileHeader": 1,
+   "SignonPacket": 10,
+   "cmd_18": 2,
+   "SendTables": 1,
+   "ClassInfo": 1,
+   "StringTables": 1,
+   "SyncTick": 1,
+   "Packet": 9892,
+   "FullPacket": 11,
+   "Stop": 1,
+   "SpawnGroups": 1,
+   "FileInfo": 1
+  },
+  "max_tick": 19784,
+  "duration_seconds_by_ticks": 659.5,
+  "file_name": "auto-20261020-1617-start-ShaNachnetsya.dem"
+ },
+ "backend_used": true,
+ "parse_error": null,
+ "outputs": [
+  "AI_CONTEXT.md",
+  "backend_meta.json",
+  "chat.jsonl",
+  "combatlog.jsonl",
+  "entity_classes.json",
+  "events.jsonl",
+  "frames",
+  "frames.jsonl",
+  "game_events.jsonl",
+  "modifiers.jsonl",
+  "pings.jsonl",
+  "players.json",
+  "report.md",
+  "summary.json",
+  "timeline.jsonl",
+  "unit_orders.jsonl"
+ ],
+ "counts": {
+  "timeline_snapshots": 661,
+  "events": 97,
+  "combatlog": 2410,
+  "chat": 5,
+  "game_events": 140
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "clock": "05:48",
+ "tick": 13622,
+ "game_time_s": 348.87,
+ "scores": {
+  "radiant": 0,
+  "dire": 0
+ },
+ "heroes": [
+  {
+   "player_id": 1,
+   "name": null,
+   "hero": "Nevermore",
+   "team": "Dire",
+   "x": 476.7,
+   "y": 1295.9,
+   "region": "мид (сторона Dire)",
+   "facing_yaw_deg": 75.9,
+   "facing_compass": "север",
+   "movement": {
+    "speed": 232,
+    "move_angle_deg": 26.5,
+    "move_compass": "северо-восток"
+   },
+   "alive": true,
+   "hp_pct": 39,
+   "active_modifiers": [
+    {
+     "name": "nevermore_necromastery",
+     "count": 2,
+     "stack": 16,
+     "left_s": -438.7
+    },
+    {
+     "name": "nevermore_presence",
+     "count": 2,
+     "stack": 0,
+     "left_s": -7.6
+    },
+    {
+     "name": "nevermore_presence_aura",
+     "count": 2,
+     "stack": 0,
+     "left_s": null
+    },
+    {
+     "name": "nevermore_shadowraze_debuff",
+     "count": 1,
+     "stack": 1,
+     "left_s": 0.1
+    },
+    {
+     "name": "tower_aura_bonus",
+     "count": 1,
+     "stack": 0,
+     "left_s": -42.6
+    }
+   ],
+   "level": 5,
+   "actions": [
+    "только что применил **nevermore_shadowraze2** (5.9 c назад)",
+    "атаковал/бил по **npc_dota_hero_shadow_fiend** (урона за окно: 1445, последний удар -7.5 c назад)",
+    "получал урон от **npc_dota_hero_shadow_fiend** (всего за окно: 1183)"
+   ],
+   "last_order": null,
+   "stats": {
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "level_pr": 5,
+    "buyback_cost": 0,
+    "respawn_seconds_pr": -1,
+    "net_worth": 1373,
+    "total_gold": 1313,
+    "total_xp": 1996,
+    "last_hits": 11,
+    "denies": 5
+   }
+  }
+ ],
+ "roshan": {
+  "hp": 6650,
+  "hp_max": 6650,
+  "alive": true
+ }
+}

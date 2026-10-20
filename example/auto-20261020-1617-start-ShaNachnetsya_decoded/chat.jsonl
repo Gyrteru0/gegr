@@ -1,0 +1,5 @@
+{"_kind": "chat_event", "_tick": 3156, "playerid_1": -1, "playerid_2": -1, "time": 0, "type": "CHAT_MESSAGE_NO_BATTLE_POINTS", "value": 1}
+{"_kind": "chat_event", "_tick": 13558, "playerid_1": 2, "playerid_2": -1, "time": 346.73334, "type": "CHAT_MESSAGE_GLYPH_USED", "value": 0}
+{"_kind": "chat_event", "_tick": 18550, "playerid_1": 3, "playerid_2": -1, "time": 513.10004, "type": "CHAT_MESSAGE_GLYPH_USED", "value": 0}
+{"_kind": "chat_event", "_tick": 18954, "playerid_1": 0, "playerid_2": -1, "time": 526.60004, "type": "CHAT_MESSAGE_ITEM_PURCHASE", "value": 63}
+{"_kind": "chat_event", "_tick": 19456, "playerid_1": 0, "playerid_2": -1, "playerid_3": -1, "playerid_4": -1, "playerid_5": -1, "playerid_6": -1, "time": 543.30005, "type": "CHAT_MESSAGE_TOWER_KILL", "value": 2, "value2": 90, "value3": 1}

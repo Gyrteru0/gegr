@@ -1,0 +1,376 @@
+[
+ {
+  "player_id": 0,
+  "ability_order": [
+   {
+    "clock": "-01:28",
+    "game_time_s": -88.13,
+    "ability": "nevermore_necromastery",
+    "level": 1
+   },
+   {
+    "clock": "-01:26",
+    "game_time_s": -86.13,
+    "ability": "nevermore_shadowraze1",
+    "level": 1
+   },
+   {
+    "clock": "-01:26",
+    "game_time_s": -86.13,
+    "ability": "nevermore_shadowraze2",
+    "level": 1
+   },
+   {
+    "clock": "-01:26",
+    "game_time_s": -86.13,
+    "ability": "nevermore_shadowraze3",
+    "level": 1
+   },
+   {
+    "clock": "00:59",
+    "game_time_s": 59.87,
+    "ability": "nevermore_presence",
+    "level": 1
+   },
+   {
+    "clock": "01:58",
+    "game_time_s": 118.87,
+    "ability": "nevermore_shadowraze1",
+    "level": 2
+   },
+   {
+    "clock": "01:58",
+    "game_time_s": 118.87,
+    "ability": "nevermore_shadowraze2",
+    "level": 2
+   },
+   {
+    "clock": "01:58",
+    "game_time_s": 118.87,
+    "ability": "nevermore_shadowraze3",
+    "level": 2
+   },
+   {
+    "clock": "03:00",
+    "game_time_s": 180.87,
+    "ability": "nevermore_presence",
+    "level": 2
+   },
+   {
+    "clock": "04:27",
+    "game_time_s": 267.87,
+    "ability": "nevermore_shadowraze1",
+    "level": 3
+   },
+   {
+    "clock": "04:27",
+    "game_time_s": 267.87,
+    "ability": "nevermore_shadowraze2",
+    "level": 3
+   },
+   {
+    "clock": "04:27",
+    "game_time_s": 267.87,
+    "ability": "nevermore_shadowraze3",
+    "level": 3
+   },
+   {
+    "clock": "05:40",
+    "game_time_s": 340.87,
+    "ability": "nevermore_presence",
+    "level": 3
+   },
+   {
+    "clock": "07:52",
+    "game_time_s": 472.87,
+    "ability": "nevermore_presence",
+    "level": 4
+   }
+  ],
+  "talents": [],
+  "item_order": [
+   {
+    "clock": "01:04",
+    "game_time_s": 64.87,
+    "item": "item_gauntlets"
+   },
+   {
+    "clock": "01:41",
+    "game_time_s": 101.87,
+    "item": "item_bracer"
+   },
+   {
+    "clock": "02:39",
+    "game_time_s": 159.87,
+    "item": "item_recipe_bracer"
+   },
+   {
+    "clock": "03:39",
+    "game_time_s": 219.87,
+    "item": "item_magic_stick"
+   },
+   {
+    "clock": "05:22",
+    "game_time_s": 322.87,
+    "item": "item_boots_of_speed"
+   },
+   {
+    "clock": "06:35",
+    "game_time_s": 395.87,
+    "item": "item_gloves_of_haste"
+   },
+   {
+    "clock": "08:25",
+    "game_time_s": 505.87,
+    "item": "item_boots_of_elven"
+   },
+   {
+    "clock": "08:46",
+    "game_time_s": 526.87,
+    "item": "item_power_treads"
+   }
+  ],
+  "item_uses": {
+   "item_ward_observer": 4,
+   "item_branches": 2,
+   "item_tango": 6,
+   "item_enchanted_mango": 5,
+   "item_faerie_fire": 2,
+   "item_flask": 4,
+   "item_magic_stick": 6,
+   "item_tpscroll": 1,
+   "item_power_treads": 3
+  },
+  "hero": "Nevermore",
+  "hero_internal": "npc_dota_hero_shadow_fiend",
+  "team": "Radiant"
+ },
+ {
+  "player_id": 1,
+  "ability_order": [
+   {
+    "clock": "-01:28",
+    "game_time_s": -88.13,
+    "ability": "nevermore_shadowraze1",
+    "level": 1
+   },
+   {
+    "clock": "-01:28",
+    "game_time_s": -88.13,
+    "ability": "nevermore_shadowraze2",
+    "level": 1
+   },
+   {
+    "clock": "-01:28",
+    "game_time_s": -88.13,
+    "ability": "nevermore_shadowraze3",
+    "level": 1
+   },
+   {
+    "clock": "-01:28",
+    "game_time_s": -88.13,
+    "ability": "nevermore_necromastery",
+    "level": 1
+   },
+   {
+    "clock": "01:11",
+    "game_time_s": 71.87,
+    "ability": "nevermore_presence",
+    "level": 1
+   },
+   {
+    "clock": "01:58",
+    "game_time_s": 118.87,
+    "ability": "nevermore_shadowraze1",
+    "level": 2
+   },
+   {
+    "clock": "01:58",
+    "game_time_s": 118.87,
+    "ability": "nevermore_shadowraze2",
+    "level": 2
+   },
+   {
+    "clock": "01:58",
+    "game_time_s": 118.87,
+    "ability": "nevermore_shadowraze3",
+    "level": 2
+   },
+   {
+    "clock": "03:27",
+    "game_time_s": 207.87,
+    "ability": "nevermore_presence",
+    "level": 2
+   },
+   {
+    "clock": "04:55",
+    "game_time_s": 295.87,
+    "ability": "nevermore_shadowraze1",
+    "level": 3
+   },
+   {
+    "clock": "04:55",
+    "game_time_s": 295.87,
+    "ability": "nevermore_shadowraze2",
+    "level": 3
+   },
+   {
+    "clock": "04:55",
+    "game_time_s": 295.87,
+    "ability": "nevermore_shadowraze3",
+    "level": 3
+   },
+   {
+    "clock": "07:44",
+    "game_time_s": 464.87,
+    "ability": "nevermore_presence",
+    "level": 3
+   }
+  ],
+  "talents": [],
+  "item_order": [
+   {
+    "clock": "-01:27",
+    "game_time_s": -87.13,
+    "item": "item_tango"
+   },
+   {
+    "clock": "-01:26",
+    "game_time_s": -86.13,
+    "item": "item_ironwood_branch"
+   },
+   {
+    "clock": "-01:25",
+    "game_time_s": -85.13,
+    "item": "item_circlet"
+   },
+   {
+    "clock": "-01:23",
+    "game_time_s": -83.13,
+    "item": "item_enchanted_mango"
+   },
+   {
+    "clock": "-01:22",
+    "game_time_s": -82.13,
+    "item": "item_faerie_fire"
+   },
+   {
+    "clock": "01:26",
+    "game_time_s": 86.87,
+    "item": "item_gauntlets"
+   },
+   {
+    "clock": "01:54",
+    "game_time_s": 114.87,
+    "item": "item_flask"
+   },
+   {
+    "clock": "02:34",
+    "game_time_s": 154.87,
+    "item": "item_recipe_bracer"
+   },
+   {
+    "clock": "03:08",
+    "game_time_s": 188.87,
+    "item": "item_bracer"
+   },
+   {
+    "clock": "05:32",
+    "game_time_s": 332.87,
+    "item": "item_magic_stick"
+   },
+   {
+    "clock": "06:56",
+    "game_time_s": 416.87,
+    "item": "item_boots_of_speed"
+   },
+   {
+    "clock": "08:02",
+    "game_time_s": 482.87,
+    "item": "item_gloves_of_haste"
+   }
+  ],
+  "item_uses": {
+   "item_ward_observer": 4,
+   "item_branches": 2,
+   "item_tango": 6,
+   "item_enchanted_mango": 5,
+   "item_faerie_fire": 2,
+   "item_flask": 4,
+   "item_magic_stick": 6,
+   "item_tpscroll": 1,
+   "item_power_treads": 3
+  },
+  "hero": "Nevermore",
+  "hero_internal": "npc_dota_hero_shadow_fiend",
+  "team": "Dire"
+ },
+ {
+  "player_id": 2,
+  "ability_order": [
+   {
+    "clock": "-01:28",
+    "game_time_s": -88.13,
+    "ability": "beastmaster_inner_beast",
+    "level": 1
+   }
+  ],
+  "talents": [],
+  "item_order": [],
+  "item_uses": {},
+  "hero": "Beastmaster",
+  "hero_internal": "npc_dota_hero_beastmaster",
+  "team": "Dire"
+ },
+ {
+  "player_id": 3,
+  "ability_order": [
+   {
+    "clock": "-01:28",
+    "game_time_s": -88.13,
+    "ability": "beastmaster_inner_beast",
+    "level": 1
+   }
+  ],
+  "talents": [],
+  "item_order": [],
+  "item_uses": {},
+  "hero": "Beastmaster",
+  "hero_internal": "npc_dota_hero_beastmaster",
+  "team": "Dire"
+ },
+ {
+  "player_id": 4,
+  "ability_order": [
+   {
+    "clock": "-01:28",
+    "game_time_s": -88.13,
+    "ability": "beastmaster_inner_beast",
+    "level": 1
+   }
+  ],
+  "talents": [],
+  "item_order": [],
+  "item_uses": {},
+  "hero": "Beastmaster",
+  "hero_internal": "npc_dota_hero_beastmaster",
+  "team": "Dire"
+ },
+ {
+  "player_id": 5,
+  "ability_order": [
+   {
+    "clock": "-01:28",
+    "game_time_s": -88.13,
+    "ability": "beastmaster_inner_beast",
+    "level": 1
+   }
+  ],
+  "talents": [],
+  "item_order": [],
+  "item_uses": {},
+  "hero": "Beastmaster",
+  "hero_internal": "npc_dota_hero_beastmaster",
+  "team": "Dire"
+ }
+]

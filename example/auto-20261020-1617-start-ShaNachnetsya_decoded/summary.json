@@ -1,0 +1,215 @@
+{
+ "demo_file": "auto-20261020-1617-start-ShaNachnetsya.dem",
+ "file_size": 7643628,
+ "map_name": "start",
+ "server_name": "ShaNachnetsya",
+ "client_name": "SourceTV Demo",
+ "patch_version": 48,
+ "build_num": 10938,
+ "demo_version": "valve_demo_2",
+ "match_id": null,
+ "game_mode_id": null,
+ "winner_team_num": null,
+ "winner": null,
+ "league_id": null,
+ "radiant_team_id": null,
+ "dire_team_id": null,
+ "radiant_team_tag": null,
+ "dire_team_tag": null,
+ "playback_seconds": 659.4667,
+ "playback_ticks": 19784,
+ "game_time_anchor": "combatlog GAME_STATE -> in-progress",
+ "horn_demo_time_s": 105.2,
+ "players": [
+  {
+   "player_id": 0,
+   "name": "ShaNachnetsya",
+   "steam_id": 76561198720950891,
+   "is_bot": false,
+   "hero": "Nevermore",
+   "team": "Radiant",
+   "team_num": 2,
+   "final_level": 7,
+   "final_items": [
+    "item_power_treads",
+    "item_magic_stick",
+    "item_bracer",
+    "item_bracer"
+   ],
+   "final_stats": {
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "level_pr": 7,
+    "buyback_cost": 0,
+    "respawn_seconds_pr": -1,
+    "net_worth": 3210,
+    "total_gold": 3015,
+    "total_xp": 3782,
+    "last_hits": 48,
+    "denies": 15
+   }
+  },
+  {
+   "player_id": 1,
+   "is_bot": true,
+   "hero": "Nevermore",
+   "team": "Dire",
+   "team_num": 3,
+   "final_level": 6,
+   "final_items": [
+    "item_bracer",
+    "item_bracer",
+    "item_ironwood_branch",
+    "item_boots_of_speed",
+    "item_ironwood_branch",
+    "item_magic_stick",
+    "item_gloves_of_haste",
+    "item_teleport_scroll"
+   ],
+   "final_stats": {
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "level_pr": 6,
+    "buyback_cost": 0,
+    "respawn_seconds_pr": -1,
+    "net_worth": 2730,
+    "total_gold": 2870,
+    "total_xp": 2802,
+    "last_hits": 13,
+    "denies": 6
+   }
+  },
+  {
+   "player_id": 2,
+   "is_bot": true,
+   "hero": "Beastmaster",
+   "team": "Dire",
+   "team_num": 3,
+   "final_level": 1,
+   "final_items": [
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_teleport_scroll"
+   ],
+   "final_stats": {
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "level_pr": 1,
+    "buyback_cost": 0,
+    "respawn_seconds_pr": -1,
+    "net_worth": 1050,
+    "total_gold": 815,
+    "total_xp": 0,
+    "last_hits": 0,
+    "denies": 0
+   }
+  },
+  {
+   "player_id": 3,
+   "is_bot": true,
+   "hero": "Beastmaster",
+   "team": "Dire",
+   "team_num": 3,
+   "final_level": 1,
+   "final_items": [
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_teleport_scroll"
+   ],
+   "final_stats": {
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "level_pr": 1,
+    "buyback_cost": 0,
+    "respawn_seconds_pr": -1,
+    "net_worth": 1050,
+    "total_gold": 815,
+    "total_xp": 0,
+    "last_hits": 0,
+    "denies": 0
+   }
+  },
+  {
+   "player_id": 4,
+   "is_bot": true,
+   "hero": "Beastmaster",
+   "team": "Dire",
+   "team_num": 3,
+   "final_level": 1,
+   "final_items": [
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_teleport_scroll"
+   ],
+   "final_stats": {
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "level_pr": 1,
+    "buyback_cost": 0,
+    "respawn_seconds_pr": -1,
+    "net_worth": 1050,
+    "total_gold": 815,
+    "total_xp": 0,
+    "last_hits": 0,
+    "denies": 0
+   }
+  },
+  {
+   "player_id": 5,
+   "is_bot": true,
+   "hero": "Beastmaster",
+   "team": "Dire",
+   "team_num": 3,
+   "final_level": 1,
+   "final_items": [
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_ring_of_protection",
+    "item_teleport_scroll"
+   ],
+   "final_stats": {
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "level_pr": 1,
+    "buyback_cost": 0,
+    "respawn_seconds_pr": -1,
+    "net_worth": 1050,
+    "total_gold": 815,
+    "total_xp": 0,
+    "last_hits": 0,
+    "denies": 0
+   }
+  }
+ ],
+ "picks_bans": null,
+ "counts": {
+  "timeline_snapshots": 661,
+  "events": 97,
+  "combatlog": 2410,
+  "chat": 5,
+  "game_events": 140
+ },
+ "unfinished_demo": true,
+ "note": "В демке нет финального CDemoFileInfo с итогами матча (запись оборвана до конца игры) — итог восстановлен из последнего снимка мира."
+}

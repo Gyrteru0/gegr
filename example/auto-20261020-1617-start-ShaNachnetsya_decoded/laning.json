@@ -1,0 +1,86 @@
+[
+ {
+  "player_id": 0,
+  "name": "ShaNachnetsya",
+  "hero": "Nevermore",
+  "team": "Radiant",
+  "lane": "мид",
+  "last_hits_10": 48,
+  "denies_10": 15,
+  "total_gold_10": 3015,
+  "total_xp_10": 3782,
+  "net_worth_10": 3210,
+  "opponents": [
+   "Nevermore"
+  ],
+  "gold_diff_vs_lane": 145.0
+ },
+ {
+  "player_id": 1,
+  "name": null,
+  "hero": "Nevermore",
+  "team": "Dire",
+  "lane": "мид",
+  "last_hits_10": 13,
+  "denies_10": 6,
+  "total_gold_10": 2870,
+  "total_xp_10": 2802,
+  "net_worth_10": 2730,
+  "opponents": [
+   "Nevermore"
+  ],
+  "gold_diff_vs_lane": -145.0
+ },
+ {
+  "player_id": 2,
+  "name": null,
+  "hero": "Beastmaster",
+  "team": "Dire",
+  "lane": "топ",
+  "last_hits_10": 0,
+  "denies_10": 0,
+  "total_gold_10": 815,
+  "total_xp_10": 0,
+  "net_worth_10": 1050,
+  "opponents": []
+ },
+ {
+  "player_id": 3,
+  "name": null,
+  "hero": "Beastmaster",
+  "team": "Dire",
+  "lane": "топ",
+  "last_hits_10": 0,
+  "denies_10": 0,
+  "total_gold_10": 815,
+  "total_xp_10": 0,
+  "net_worth_10": 1050,
+  "opponents": []
+ },
+ {
+  "player_id": 4,
+  "name": null,
+  "hero": "Beastmaster",
+  "team": "Dire",
+  "lane": "топ",
+  "last_hits_10": 0,
+  "denies_10": 0,
+  "total_gold_10": 815,
+  "total_xp_10": 0,
+  "net_worth_10": 1050,
+  "opponents": []
+ },
+ {
+  "player_id": 5,
+  "name": null,
+  "hero": "Beastmaster",
+  "team": "Dire",
+  "lane": "топ",
+  "last_hits_10": 0,
+  "denies_10": 0,
+  "total_gold_10": 815,
+  "total_xp_10": 0,
+  "net_worth_10": 1050,
+  "opponents": []
+ }
+]
